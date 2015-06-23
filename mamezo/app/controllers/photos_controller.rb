@@ -4,15 +4,22 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    upload_file = photo_params[:file]
+    upload_filecomment = photo_params[:comment]
+
+    if upload_file != nil
+      photo = upload_file.read
+    end
+    @photo = Photo.new(file: photo, comment: upload_filecomment)
     if @photo.save
     else
       render 'new'
     end
   end
 
+
   private
     def photo_params
-      params.require(:photo).permit(:name, :comment)
+      params.require(:photo).permit(:file, :comment)
     end
 end
