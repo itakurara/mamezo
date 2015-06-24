@@ -3,4 +3,5 @@
 <p><%= link_to 'post', new_photo_path %></p>
 <% @photos.each do |photo| %>
   <%= image_tag show_image_photo_path(photo) %>
+  <%= photo.comment %>
 <% end %>
