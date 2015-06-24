@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :photos
-  get 'photos/new'
+  resources :photos do
+    member do
+      get 'show_image'
+    end
+  end
   root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

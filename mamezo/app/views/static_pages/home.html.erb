@@ -1,2 +1,6 @@
 <h1>mamezo</h1>
 <p>まめぞうだらけのサイト</p>
+<p><%= link_to 'post', new_photo_path %></p>
+<% @photos.each do |photo| %>
+  <%= image_tag show_image_photo_path(photo) %>
+<% end %>

@@ -1,0 +1,4 @@
+<h1>アップロードした画像たち</h1>
+<% @photos.each do |photo| %>
+  <%= image_tag show_image_photo_path(photo), class: "test" %>
+<% end %>

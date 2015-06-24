@@ -1,4 +1,7 @@
 class PhotosController < ApplicationController
+  def index
+    @photos = Photo.all
+  end
   def new
     @photo = Photo.new
   end
@@ -12,9 +15,16 @@ class PhotosController < ApplicationController
     end
     @photo = Photo.new(file: photo, comment: upload_filecomment)
     if @photo.save
+      @photos = Photo.all
+      render 'static_pages/home'
     else
       render 'new'
     end
+  end
+
+  def show_image
+    @photo = Photo.find(params[:id])
+    send_data @photo.file, :type=> 'image/jpeg', :disposition => 'inline'
   end
 
 
