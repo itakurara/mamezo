@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require imagesloaded.pkgd.min
+//= require masonry.pkgd.min
 //= require_tree .

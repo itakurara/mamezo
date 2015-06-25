@@ -1,7 +1,12 @@
 <h1>mamezo</h1>
-<p>まめぞうだらけのサイト</p>
+<p>まめぞうだらけ</p>
 <p><%= link_to 'post', new_photo_path %></p>
+<div class="js-masonry">
 <% @photos.each do |photo| %>
+  <div class="js-masonry--item item">
   <%= image_tag show_image_photo_path(photo) %>
   <%= photo.comment %>
-<% end %>
+  </div>
+  <% end %>
+</div>
+

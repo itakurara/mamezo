@@ -1,9 +1,18 @@
-<h1>投稿画面</h1>
+<h1 class="ttl">投稿画面</h1>
 
+<div class="form">
 <%= form_for(@photo) do |f| %>
-  <%= f.file_field :file %>
-  <%= f.label :comment %>
-  <%= f.text_field :comment %>
+  
+  <div class="form-group">
+    <%= f.file_field :file %>
+  </div>
 
-  <%= f.submit "upload photo!" %>
+  <div class="form-group">
+    <%= f.label :comment %>
+    <%= f.text_area :comment, class:"form-control" %>
+  </div>
+
+<%= f.submit "upload photo!", class:"btn btn-default" %>
 <% end %>
+</div>
+
