@@ -2,10 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
-  elm = document.querySelector('.js-masonry')
-  msnry = new Masonry(elm,{
-    itemSelector: '.js-masonry--item'
-    columnWidth: 360
-  })
+  $elm = $('.js-masonry')
+  $elm.imagesLoaded().done ->
+    $elm.masonry({
+      itemSelector: '.js-masonry--item'
+      columnWidth: 360
+      gutterWidth: 10
+      isFitWidth: true
+    }) 
+    
+  
 
 

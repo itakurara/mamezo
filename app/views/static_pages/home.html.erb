@@ -1,7 +1,7 @@
-<h1>mamezo</h1>
+<h1 class="sitettl">mamezo</h1>
 <p>まめぞうだらけ</p>
 <p><%= link_to 'post', new_photo_path %></p>
-<div class="js-masonry">
+<div class="js-masonry transitions-enabled centered">
 <% @photos.each do |photo| %>
   <div class="js-masonry--item item">
   <%= image_tag show_image_photo_path(photo) %>
