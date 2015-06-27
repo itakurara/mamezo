@@ -5,6 +5,7 @@
 <% @photos.each do |photo| %>
   <div class="js-masonry--item item">
   <%= image_tag show_image_photo_path(photo) %>
+  <%= photo.id %>
   <% unless photo.comment.empty? %>
     <div class="item--comment">
       <%= photo.comment %>
