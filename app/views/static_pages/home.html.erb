@@ -1,11 +1,18 @@
-<h1 class="sitettl">mamezo</h1>
-<p>まめぞうだらけ</p>
-<p><%= link_to 'post', new_photo_path %></p>
+<header class="header">
+  <h1 class="sitettl">mamezo</h1>
+  <p>まめぞうだらけ</p>
+  <% if signed_in? %>
+    <ul class="util">
+      <li><%= link_to 'post', new_photo_path %></li>
+      <li><%= link_to 'sign out', signout_path, method: "delete" %></li>
+    </ul>
+  <% end %>
+</header>
+
 <div class="js-masonry transitions-enabled centered">
 <% @photos.each do |photo| %>
   <div class="js-masonry--item item">
   <%= image_tag show_image_photo_path(photo) %>
-  <%= photo.id %>
   <% unless photo.comment.empty? %>
     <div class="item--comment">
       <%= photo.comment %>
