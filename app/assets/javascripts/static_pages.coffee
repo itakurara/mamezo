@@ -6,7 +6,7 @@ $ ->
   $elm.imagesLoaded().done ->
     $elm.masonry({
       itemSelector: '.js-masonry--item'
-      columnWidth: 300
+      columnWidth: 290
       gutterWidth: 10
       isFitWidth: true
     }) 
