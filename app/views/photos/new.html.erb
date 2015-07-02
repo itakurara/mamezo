@@ -1,5 +1,9 @@
 <h1 class="ttl">投稿画面</h1>
 
+<%#
+  FIXME photos_controllerからここに遷移してくるルートがあるので、@photo.errorsが
+  存在する場合は@photo.errors.full_messagesを出力するコードがあるといいです。
+%>
 <div class="form">
 <%= form_for(@photo) do |f| %>
   

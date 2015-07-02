@@ -1,3 +1,5 @@
+# FIXME Railsの世界ではdeviseという認証ライブラリがデファクトスタンダードなので、
+# 使い方を覚える意味で将来的には置き換えてみましょう。今はこれでOKです。Rails Tutorialの書き方ですね。
 class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
   before_create :create_remember_token
