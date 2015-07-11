@@ -22,7 +22,6 @@ module SessionsHelper
   end
 
   def signed_in?
-    # FIXME current_user.present?
-    !current_user.nil?
+    current_user.present?
   end
 end
