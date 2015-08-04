@@ -6,6 +6,8 @@ class StaticPagesController < ApplicationController
     # 例えば写真が1000枚あった場合、トップページを表示するのがとても遅くなってしまいます。
     #
     # またkaminariというCoolなページネーションライブラリなどもあるので、それを活用してもいいです。
-    @photos = Photo.order('created_at DESC')
+    
+    #@photos = Photo.order('created_at DESC')
+    @photos = Photo.page(params[:page]).per(3)
   end
 end
