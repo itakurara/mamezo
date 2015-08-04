@@ -3,14 +3,25 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
   $elm = $('.js-masonry')
-  $elm.imagesLoaded().done ->
-    $elm.masonry({
-      itemSelector: '.js-masonry--item'
-      columnWidth: 290
-      gutterWidth: 10
-      isFitWidth: true
-    }) 
+  $page = $('.page')
+
+
+  doMasonry = ->
+    console.log('よばれたよ')
+    $elm.imagesLoaded().done ->
+      $elm.masonry({
+        itemSelector: '.js-masonry--item'
+        columnWidth: 290
+        gutterWidth: 10
+        isFitWidth: true
+      }) 
+      return
+    return
     
+  doMasonry()
+  $page.on('click', doMasonry)
+  
+  return
   
 
 
