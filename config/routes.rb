@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       get 'show_image'
     end
   end
-  root 'static_pages#home'
+  root 'photos#index'
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
