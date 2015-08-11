@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '3.3.5'
 gem 'masonry-rails'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'kaminari'
+gem 'pry-rails', :group => :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

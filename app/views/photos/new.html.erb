@@ -5,6 +5,8 @@
   存在する場合は@photo.errors.full_messagesを出力するコードがあるといいです。
 %>
 <div class="form">
+  <%# localeについて調べて使う！ %>
+  <p><%= @photo.errors.full_messages %></p>
 <%= form_for(@photo) do |f| %>
   
   <div class="form-group">
