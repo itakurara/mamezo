@@ -28,3 +28,4 @@ doc/
 
 # 会社PCで vendor/bundleにするつもりがinstallにしてしまったため
 /vendor/install
+/vendor/bundler
