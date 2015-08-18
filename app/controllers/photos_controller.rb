@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.page(params[:page]).per(20)
+    @photos = Photo.page(params[:page]).per(3)
   end
 
   def new

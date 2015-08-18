@@ -26,6 +26,13 @@ body{
 .ttl{
   margin-bottom:20px;
 }
+.photos{
+  opacity:0;
+  transition:opacity .5s ease;
+}
+.photos.show{
+  opacity:1;
+}
 .form{
   max-width:600px;
 }

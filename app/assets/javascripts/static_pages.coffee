@@ -3,15 +3,18 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 ready = ->
   $elm = $('.js-masonry')
-  $elm.imagesLoaded().done ->
+  display = ->
+    $('.photos').addClass('show')
+
+  $elm.imagesLoaded().done( ->
     $elm.masonry({
       itemSelector: '.js-masonry--item'
       columnWidth: 290
       gutterWidth: 10
       isFitWidth: true
-    }) 
-  $page = $('.page')
-  $page.on('click', doMasonry)
+    }) ).done(display)
+
   
 $(document).ready(ready)
 $(document).on('page:load', ready)
+$(document).on('page:fetch', -> $('.photos').removeClass('show'))
