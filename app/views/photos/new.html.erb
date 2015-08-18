@@ -7,7 +7,9 @@
 <div class="form">
   <% if @photo.errors.full_messages.any? %>
     <%# localeについて調べて使う！ %>
-    <p><%= @photo.errors.full_messages %></p>
+    <% @photo.errors.full_messages.each do |msg| %>
+      <p class="text-danger"><%= msg %></p>
+    <% end %>
   <% else %>
   <% end %>
 <%= form_for(@photo) do |f| %>
