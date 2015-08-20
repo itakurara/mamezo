@@ -16,7 +16,7 @@
 <% @photos.each do |photo| %>
   <div class="js-masonry--item item">
   <%#= image_tag show_image_photo_path(photo) %>
-  <%= image_tag photo.file.url(:thumb) %>
+  <%= image_tag photo.thumb.url(:thumb) %>
   <% unless photo.comment.empty? %>
     <div class="item--comment">
       <%= photo.comment %>
