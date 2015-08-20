@@ -27,6 +27,14 @@ class PhotosController < ApplicationController
     send_data @photo.file, :type=> 'image/jpeg', :disposition => 'inline'
   end
 
+  def like
+    photo= Photo.find(params[:id])
+    like_count = photo.like_count + 1
+    photo.update(like_count: like_count)
+
+    redirect_to root_path
+  end
+
 
   private
     def photo_params

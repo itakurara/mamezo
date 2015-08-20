@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :photos do
     member do
       get 'show_image'
+      get 'like'
     end
   end
   root 'photos#index'

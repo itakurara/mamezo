@@ -56,6 +56,18 @@ body{
     background:rgba(0,0,0,.4);
     transition-property:all;
     transition-duration:.4s;
+    overflow:hidden;
+  }
+
+  .item--comment a{
+    color: #fff;
+    display:inline-block;
+    float:right;
+    text-decoration:none;
+
+    &:hover{
+      color: pink;
+    }
   }
 }
 

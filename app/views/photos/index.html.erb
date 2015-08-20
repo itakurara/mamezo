@@ -20,6 +20,7 @@
   <% unless photo.comment.empty? %>
     <div class="item--comment">
       <%= photo.comment %>
+      <a href="<%= like_photo_path(photo) %>" class="btn-like">♥ <%= photo.like_count %></a>
     </div>
   <% end %>
   </div>
