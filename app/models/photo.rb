@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  validates :file, presence: true
+  validates_attachment :file, :presence => true, :content_type => /^image\/(png|gif|jpeg)/
   validates :comment, length: {maximum: 60}
 
   has_attached_file :file, styles: {thumb: "290x"}

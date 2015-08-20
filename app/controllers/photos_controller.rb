@@ -11,9 +11,9 @@ class PhotosController < ApplicationController
     upload_file = photo_params[:file]
     upload_filecomment = photo_params[:comment]
 
-    if upload_file.present?
-      photo = upload_file.read
-    end
+    #if upload_file.present?
+    #  photo = upload_file.read
+    #end
     @photo = Photo.new(file: photo, comment: upload_filecomment)
     if @photo.save
       redirect_to root_path
