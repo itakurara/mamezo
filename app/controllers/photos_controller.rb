@@ -8,13 +8,13 @@ class PhotosController < ApplicationController
   end
 
   def create
-    upload_file = photo_params[:file]
+    upload_file = photo_params[:thumb]
     upload_filecomment = photo_params[:comment]
 
     #if upload_file.present?
     #  photo = upload_file.read
     #end
-    @photo = Photo.new(file: photo, comment: upload_filecomment)
+    @photo = Photo.new(thumb: upload_file, comment: upload_filecomment)
     if @photo.save
       redirect_to root_path
     else
@@ -30,6 +30,6 @@ class PhotosController < ApplicationController
 
   private
     def photo_params
-      params.require(:photo).permit(:file, :comment)
+      params.require(:photo).permit(:thumb, :comment)
     end
 end
