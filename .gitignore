@@ -25,6 +25,7 @@ doc/
 .DS_Store
 .idea
 .secret
+public/system/*
 
 # 会社PCで vendor/bundleにするつもりがinstallにしてしまったため
 /vendor/install
