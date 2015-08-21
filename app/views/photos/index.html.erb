@@ -17,12 +17,12 @@
   <div class="js-masonry--item item">
   <%#= image_tag show_image_photo_path(photo) %>
   <%= image_tag photo.thumb.url(:thumb) %>
-  <% unless photo.comment.empty? %>
     <div class="item--comment">
+    <% unless photo.comment.empty? %>
       <%= photo.comment %>
+    <% end %>
       <a href="<%= like_photo_path(photo) %>" class="btn-like">♥ <%= photo.like_count %></a>
     </div>
-  <% end %>
   </div>
   <% end %>
 </div>
