@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: mamezo
+  api_key: '772866177637144'
+  api_secret: NkgXVjS7EeFStpjJoK1a4tt4pC4
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: mamezo
+  api_key: '772866177637144'
+  api_secret: NkgXVjS7EeFStpjJoK1a4tt4pC4
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: mamezo
+  api_key: '772866177637144'
+  api_secret: NkgXVjS7EeFStpjJoK1a4tt4pC4
+  enhance_image_tag: true
+  static_image_support: false
