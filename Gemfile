@@ -15,6 +15,7 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'kaminari'
 gem 'pry-rails', :group => :development
 gem "paperclip", "~> 4.3"
+gem 'carrierwave'
 gem 'cloudinary'
 
 # Use ActiveModel has_secure_password
