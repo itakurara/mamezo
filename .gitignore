@@ -26,6 +26,7 @@ doc/
 .idea
 .secret
 public/system/*
+public/uploads/*
 
 # 会社PCで vendor/bundleにするつもりがinstallにしてしまったため
 /vendor/install

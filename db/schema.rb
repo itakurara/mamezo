@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820075207) do
+ActiveRecord::Schema.define(version: 20150825115606) do
 
   create_table "photos", force: :cascade do |t|
     t.binary   "file"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150820075207) do
     t.integer  "thumb_file_size"
     t.datetime "thumb_updated_at"
     t.integer  "like_count",         default: 0, null: false
+    t.string   "thumb"
   end
 
   create_table "users", force: :cascade do |t|
