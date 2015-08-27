@@ -5,6 +5,7 @@ class ThumbUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
+  include Cloudinary::CarrierWave 
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -17,15 +18,15 @@ class ThumbUploader < CarrierWave::Uploader::Base
   end
 
   process :resize_to_limit => [290, nil]
-  process :fix_rotate
+  #process :fix_rotate
 
-  def fix_rotate
-    manipulate! do |img|
-      img = img.auto_orient
-      img = yield(img) if block_given?
-      img
-    end
-  end
+  #def fix_rotate
+  #  manipulate! do |img|
+  #    img = img.auto_orient
+  #    img = yield(img) if block_given?
+  #    img
+  #  end
+  #end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
