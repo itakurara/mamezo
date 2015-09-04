@@ -18,6 +18,7 @@ gem "paperclip", "~> 4.3"
 gem "mini_magick"
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'instagram'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
