@@ -1,6 +1,16 @@
 class PhotosController < ApplicationController
   def index
     @photos = Photo.order("created_at DESC").page(params[:page]).per(10)
+    instagrams = Instagram.user_recent_media('21893736', :count => 30)
+    @insta_mame = []
+
+   #binding.pry
+    for insta in instagrams do
+      if insta.tags.include?("mamezo") then
+        @insta_mame.push(insta)
+      end
+    end
+
   end
 
   def new

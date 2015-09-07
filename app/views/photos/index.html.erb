@@ -13,6 +13,11 @@
 
 <div class="photos">
 <div class="js-masonry transitions-enabled centered">
+<% @insta_mame.each do |insta| %>
+  <div class="js-masonry--item item">  
+    <%= image_tag(insta.images.low_resolution.url) %>
+  </div>
+<% end %>
 <% @photos.each do |photo| %>
   <div class="js-masonry--item item">
   <%#= image_tag show_image_photo_path(photo) %>
