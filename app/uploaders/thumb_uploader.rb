@@ -18,6 +18,10 @@ class ThumbUploader < CarrierWave::Uploader::Base
   #end
 
   process :resize_to_limit => [290, nil]
+
+  # TODO fix_rotateはEXIFという縦横情報を元に、画像を回転してくれる機構です。
+  # 本来ならこれを有効にしておく方が、iPhoneなどから投稿する時は便利だと思います
+  # もう少し調べてみて、有効にするべきかどうかを考えてみてはどうでしょうか。
   #process :fix_rotate
 
   #def fix_rotate
