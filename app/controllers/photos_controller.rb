@@ -28,7 +28,9 @@ class PhotosController < ApplicationController
   end
 
   def like
-    photo= Photo.find(params[:id])
+    # FIXME 複数アクセスを考慮すると、lockメソッドで行ロックをかけるのがいいです。
+    # SQLiteでは行ロックがかからないみたいなので、PostgreSQLとかで確認してみるといいです。
+    photo= Photo.lock.find(params[:id])
     like_count = photo.like_count + 1
     photo.update(like_count: like_count)
 

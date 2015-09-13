@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :photos do
     member do
       get 'show_image'
+      # FIXME REST的に考えると、likeはPOSTで作った方がいいと思います
+      # カウントを取得するapiのようなものを作るとしたらGETで作った方がいいですね。
       get 'like'
     end
   end
